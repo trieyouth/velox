@@ -140,7 +140,7 @@ function install_fmt {
 }
 
 function install_boost {
-  wget_and_untar https://github.com/boostorg/boost/releases/download/${BOOST_VERSION}/${BOOST_VERSION}.tar.gz boost
+  wget_and_untar https://gh-proxy.com/https://github.com/boostorg/boost/releases/download/${BOOST_VERSION}/${BOOST_VERSION}.tar.gz boost
   (
     cd ${DEPENDENCY_DIR}/boost
     if [[ ${USE_CLANG} != "false" ]]; then
@@ -158,7 +158,7 @@ function install_boost {
 }
 
 function install_protobuf {
-  wget_and_untar https://github.com/protocolbuffers/protobuf/releases/download/v21.8/protobuf-all-21.8.tar.gz protobuf
+  wget_and_untar https://gh-proxy.com/https://github.com/protocolbuffers/protobuf/releases/download/v21.8/protobuf-all-21.8.tar.gz protobuf
   (
     cd ${DEPENDENCY_DIR}/protobuf
     ./configure CXXFLAGS="-fPIC" --prefix=${INSTALL_PREFIX}
