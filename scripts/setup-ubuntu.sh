@@ -135,7 +135,7 @@ function install_velox_deps_from_apt {
 }
 
 function install_fmt {
-  wget_and_untar https://github.com/fmtlib/fmt/archive/${FMT_VERSION}.tar.gz fmt
+  wget_and_untar https://gh-proxy.com/https://github.com/fmtlib/fmt/archive/${FMT_VERSION}.tar.gz fmt
   cmake_install_dir fmt -DFMT_TEST=OFF
 }
 
@@ -174,22 +174,22 @@ function install_folly {
 }
 
 function install_fizz {
-  wget_and_untar https://github.com/facebookincubator/fizz/archive/refs/tags/${FB_OS_VERSION}.tar.gz fizz
+  wget_and_untar https://gh-proxy.com/https://github.com/facebookincubator/fizz/archive/refs/tags/${FB_OS_VERSION}.tar.gz fizz
   cmake_install_dir fizz/fizz -DBUILD_TESTS=OFF
 }
 
 function install_wangle {
-  wget_and_untar https://github.com/facebook/wangle/archive/refs/tags/${FB_OS_VERSION}.tar.gz wangle
+  wget_and_untar https://gh-proxy.com/https://github.com/facebook/wangle/archive/refs/tags/${FB_OS_VERSION}.tar.gz wangle
   cmake_install_dir wangle/wangle -DBUILD_TESTS=OFF
 }
 
 function install_mvfst {
-  wget_and_untar https://github.com/facebook/mvfst/archive/refs/tags/${FB_OS_VERSION}.tar.gz mvfst
+  wget_and_untar https://gh-proxy.com/https://github.com/facebook/mvfst/archive/refs/tags/${FB_OS_VERSION}.tar.gz mvfst
   cmake_install_dir mvfst -DBUILD_TESTS=OFF
 }
 
 function install_fbthrift {
-  wget_and_untar https://github.com/facebook/fbthrift/archive/refs/tags/${FB_OS_VERSION}.tar.gz fbthrift
+  wget_and_untar https://gh-proxy.com/https://github.com/facebook/fbthrift/archive/refs/tags/${FB_OS_VERSION}.tar.gz fbthrift
   cmake_install_dir fbthrift -Denable_tests=OFF -DBUILD_TESTS=OFF -DBUILD_SHARED_LIBS=OFF
 }
 
@@ -214,7 +214,7 @@ function install_conda {
 function install_duckdb {
   if $BUILD_DUCKDB ; then
     echo 'Building DuckDB'
-    wget_and_untar https://github.com/duckdb/duckdb/archive/refs/tags/${DUCKDB_VERSION}.tar.gz duckdb
+    wget_and_untar https://gh-proxy.com/https://github.com/duckdb/duckdb/archive/refs/tags/${DUCKDB_VERSION}.tar.gz duckdb
     cmake_install_dir duckdb -DBUILD_UNITTESTS=OFF -DENABLE_SANITIZER=OFF -DENABLE_UBSAN=OFF -DBUILD_SHELL=OFF -DEXPORT_DLL_SYMBOLS=OFF -DCMAKE_BUILD_TYPE=Release
   fi
 }
